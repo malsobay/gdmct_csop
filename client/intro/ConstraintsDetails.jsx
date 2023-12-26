@@ -20,9 +20,8 @@ export default class ConstraintsDetails extends React.Component {
             some students must be neighbors.
           </p>
           <p>
-            These constraints vary from task to task, and there are no
-            additional constraints you need to respect other than the ones
-            stated (e.g., feel free to leave one room empty if no constraint
+            There are no additional constraints you need to respect other than the ones
+            stated (e.g., feel free to leave a room empty if no constraint
             requires you to assign at least one student in each room).
           </p>
 
@@ -30,6 +29,23 @@ export default class ConstraintsDetails extends React.Component {
             Try this example again and see what will happen if a constraint is
             violated:
           </p>
+
+          <br/>
+          <div style={{ textAlign: "center" }}>
+            <p style={{ color: "red" }}>
+              <strong>
+                NOTE: Every violated constraint will result in deducting 100
+                points from your score.
+              </strong>
+            </p>
+            <p style={{ color: "green" }}>
+              <strong>
+                NOTE: It is OK to leave some rooms empty, but you have to assign
+                all the students.
+              </strong>
+            </p>
+          </div>
+          <br/>
 
           <div className="task">
             <div className="left">
@@ -77,21 +93,8 @@ export default class ConstraintsDetails extends React.Component {
             </div>
           </div>
 
-          <div style={{ textAlign: "center" }}>
-            <p style={{ color: "red" }}>
-              <strong>
-                NOTE: Every violated constraint will result in deducting 100
-                points from your score.
-              </strong>
-            </p>
-            <p style={{ color: "green" }}>
-              <strong>
-                NOTE: It is OK to leave some rooms empty, but you have to assign
-                all the students.
-              </strong>
-            </p>
-          </div>
-
+          
+          <br/><br/>
           <button
             type="button"
             className="bp3-button bp3-intent-nope"

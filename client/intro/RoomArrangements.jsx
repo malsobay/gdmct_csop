@@ -14,14 +14,8 @@ export default class RoomArrangements extends React.Component {
             might "look" different on your screen.
           </p>
 
-          <div className="image">
-            <img src="/experiment/instruction-room-arrangements.svg" />
-          </div>
-
           <p>
-            In all cases and for any arrangement that appears for you, you only
-            need to consider the numbers on those rooms when addressing
-            constraints in a task. In particular,{" "}
+            For constraints that mention students being "neighbors", {" "}
             <strong>
               "neighbor" is defined as rooms with consecutive numbers
             </strong>
@@ -29,6 +23,13 @@ export default class RoomArrangements extends React.Component {
             Room 102 is next door to both Room 101 and Room 103. On the other
             hand, Room 101 is only next door to Room 102.
           </p>
+
+          <br/>
+          <div className="image">
+            <img src="/experiment/instruction-room-arrangements.svg" />
+          </div>
+
+          <br/><br/>
 
           <button
             type="button"

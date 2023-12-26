@@ -29,13 +29,7 @@ export default class Overview extends React.Component {
           <p>
             You have at most{" "}
             <strong>{Math.ceil(treatment.stageDuration / 60.0)} minutes</strong>{" "}
-            to work on each task. Completing the entire game may take you as
-            long as {Math.ceil((treatment.stageDuration / 60.0) * 6.0)} minutes.{" "}
-            <strong>
-              If you do not have at least{" "}
-              {Math.ceil((treatment.stageDuration / 60.0) * 6.0)} minutes
-              available to work on this HIT please return it now.
-            </strong>
+            to complete the task. 
           </p>
 
           {social ? (
@@ -76,17 +70,17 @@ export default class Overview extends React.Component {
             </p>
           )}
 
-          <p>
+          {/* <p>
             The game <strong>must be played on a desktop or laptop</strong>.
             There is NO mobile support
-          </p>
+          </p> */}
 
-          <p>
+          {/* <p>
             <strong>
               For the best experience, please maximize the window containing
               this task or make it as large as possible.
             </strong>
-          </p>
+          </p> */}
           <button
             type="button"
             className="bp3-button bp3-intent-nope"

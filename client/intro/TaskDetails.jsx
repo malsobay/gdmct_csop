@@ -54,7 +54,7 @@ export default class TaskDetails extends React.Component {
         <div className="instructions">
           <h1 className={"bp3-heading"}> Room Assignment Tasks </h1>
           <p>
-            In each task (or round), you will be asked to{" "}
+            In this puzzle, you will be asked to{" "}
             <strong>assign students to dorm rooms</strong>. Students express
             their degree of satisfaction for living in a room as a number
             between 0 and 100 (the higher the rating, the more satisfied the
@@ -66,6 +66,15 @@ export default class TaskDetails extends React.Component {
             solve the problem. To assign a student into a room, drag the icon of
             that student and drop it into the room. Try this example:
           </p>
+
+          <div style={{ textAlign: "center" }}>
+            <p>
+              <strong>
+                NOTE: ALL the students HAVE to be assigned to a room in order
+                for your score to count.
+              </strong>
+            </p>
+          </div>
 
           <div className="task">
             <div className="left">
@@ -122,15 +131,8 @@ export default class TaskDetails extends React.Component {
             </div>
           </div>
 
-          <div style={{ textAlign: "center" }}>
-            <p>
-              <strong>
-                NOTE: ALL the students HAVE to be assigned to a room in order
-                for your score to count.
-              </strong>
-            </p>
-          </div>
-  
+          
+          <br/><br/>
           <button
             type="button"
             className="bp3-button bp3-intent-nope"

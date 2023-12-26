@@ -32,11 +32,13 @@ import Sorry from "./exit/Sorry";
 // At this point they have been assigned a treatment. You can return
 // different instruction steps depending on the assigned treatment.
 Empirica.introSteps((game, treatment) => {
-  const steps = [Overview, TaskDetails, ConstraintsDetails, RoomArrangements];
+  // const steps = [Overview, TaskDetails, ConstraintsDetails, RoomArrangements];
+  const steps = [TaskDetails, ConstraintsDetails, RoomArrangements];
   if (game.treatment.playerCount > 1) {
     steps.push(TeamDetails, SocialInteractionDetails);
   }
-  steps.push(MoreAboutBonus, UIOverview);
+  // steps.push(MoreAboutBonus, UIOverview);
+  steps.push(UIOverview);
 
   // if (game.treatment.playerCount > 1) {
   //   steps.push(GroupQuiz);
