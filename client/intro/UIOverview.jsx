@@ -28,7 +28,7 @@ export default class UIOverview extends React.Component {
           </p>
 
           <div className="image">
-            <img src={imagePath} style={{ border: "2px solid" }} />
+            <img src={"experiment/ui_screenshot.png"} style={{ border: "2px solid", width:"100%"}} />
           </div>
 
           {/* <p>
