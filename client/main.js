@@ -66,11 +66,12 @@ Empirica.exitSteps((game, player) => {
   if (player.exitStatus !== "finished") {
     return [Sorry];
   }
-  if (game.players.length > 1) {
-    return [GroupExitSurvey, Thanks];
-  } else {
-    return [IndividualExitSurvey, Thanks];
-  }
+  return [Thanks];
+  // if (game.players.length > 1) {
+  //   return [GroupExitSurvey, Thanks];
+  // } else {
+  //   return [IndividualExitSurvey, Thanks];
+  // }
 });
 
 // Start the app render tree.
