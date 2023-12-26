@@ -26,7 +26,7 @@ import Thanks from "./exit/Thanks.jsx";
 import Sorry from "./exit/Sorry";
 
 // Set the Consent Component you want to present players (optional).
-Empirica.consent(Consent);
+// Empirica.consent(Consent);
 
 // Introduction pages to show before they play the game (optional).
 // At this point they have been assigned a treatment. You can return
@@ -38,11 +38,11 @@ Empirica.introSteps((game, treatment) => {
   }
   steps.push(MoreAboutBonus, UIOverview);
 
-  if (game.treatment.playerCount > 1) {
-    steps.push(GroupQuiz);
-  } else {
-    steps.push(IndividualQuiz);
-  }
+  // if (game.treatment.playerCount > 1) {
+  //   steps.push(GroupQuiz);
+  // } else {
+  //   steps.push(IndividualQuiz);
+  // }
 
   return steps;
 });

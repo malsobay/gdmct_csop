@@ -133,11 +133,11 @@ export default class TaskDetails extends React.Component {
   
           <button
             type="button"
-            className="bp3-button bp3-intent-nope bp3-icon-double-chevron-left"
+            className="bp3-button bp3-intent-nope"
             onClick={onPrev}
             disabled={!hasPrev}
           >
-            Previous
+            ‹‹ Previous 
           </button>
           <button
             type="button"
@@ -145,8 +145,7 @@ export default class TaskDetails extends React.Component {
             onClick={onNext}
             disabled={!hasNext}
           >
-            Next
-            <span className="bp3-icon-standard bp3-icon-double-chevron-right bp3-align-right"/>
+            Next ››
           </button>
         </div>
       </Centered>

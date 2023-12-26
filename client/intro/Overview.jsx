@@ -2,6 +2,8 @@ import React from "react";
 
 import { Centered } from "meteor/empirica:core";
 import { Button } from "@blueprintjs/core";
+import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+import "@blueprintjs/core/lib/css/blueprint.css";
 
 export default class Overview extends React.Component {
   render() {
@@ -87,11 +89,11 @@ export default class Overview extends React.Component {
           </p>
           <button
             type="button"
-            className="bp3-button bp3-intent-nope bp3-icon-double-chevron-left"
+            className="bp3-button bp3-intent-nope"
             onClick={onPrev}
             disabled={!hasPrev}
           >
-            Previous
+            ‹‹ Previous 
           </button>
           <button
             type="button"
@@ -99,8 +101,7 @@ export default class Overview extends React.Component {
             onClick={onNext}
             disabled={!hasNext}
           >
-            Next
-            <span className="bp3-icon-standard bp3-icon-double-chevron-right bp3-align-right"/>
+            Next ››
           </button>
         </div>
       </Centered>

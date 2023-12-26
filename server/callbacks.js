@@ -65,7 +65,7 @@ Empirica.onStageStart((game, round, stage) => {
   const players = game.players;
   console.debug("Round ", stage.name, "game", game._id, " started");
   const team = game.get("team");
-  console.log("is it team?", team);
+  // console.log("is it team?", team);
 
   //initiate the score for this round (because everyone will have the same score, we can save it at the round object
   stage.set("score", 0);
@@ -110,7 +110,7 @@ Empirica.onStageEnd((game, round, stage) => {
       game.set("nOptimalSolutions", game.get("nOptimalSolutions") + 1);
     }
     stage.set("optimalSubmitted", true);
-    console.log("You found the optimal");
+    // console.log("You found the optimal");
   }
 
   //add the round score to the game total cumulative score (only if it is not practice)
@@ -191,7 +191,7 @@ Empirica.onSet(
   ) => {
     const players = game.players;
     //someone changed their satisfaction status
-    console.log("key", key);
+    // console.log("key", key);
     if (key === "satisfied") {
       //check if everyone is satisfied and if so, submit their answer
       let allSatisfied = true;

@@ -3,6 +3,7 @@ import Empirica from "meteor/empirica:core";
 import "./callbacks.js";
 import "./bots.js";
 import { stepOneData, stepTwoData } from "./constants";
+import { CognitiveLoadTasks } from "./CognitiveLoadTasks";
 
 // gameInit is where the structure of a game is defined.
 // Just before every game starts, once all the players needed are ready, this
@@ -35,16 +36,24 @@ Empirica.gameInit((game, treatment) => {
     taskSequence = customShuffle(taskSequence); //this is with keeping the first practice round fixed
   }
 
-  //we'll have 1 round, each task is one stage
   const round = game.addRound();
-  _.times(taskSequence.length, i => {
-    const stage = round.addStage({
-      name: i === 0 ? "practice" : i,
-      displayName: taskSequence[i].difficulty,
-      durationInSeconds: game.treatment.stageDuration
-    });
-    stage.set("task", taskSequence[i]);
+  const stage = round.addStage({
+    name: game.treatment.experimentPhase,
+    displayName: "Room Assignment Puzzle",
+    durationInSeconds: game.treatment.stageDuration
   });
+  stage.set("task", CognitiveLoadTasks[game.treatment.experimentPhase]);
+
+  //we'll have 1 round, each task is one stage
+  // const round = game.addRound();
+  // _.times(taskSequence.length, i => {
+  //   const stage = round.addStage({
+  //     name: i === 0 ? "practice" : i,
+  //     displayName: taskSequence[i].difficulty,
+  //     durationInSeconds: game.treatment.stageDuration
+  //   });
+  //   stage.set("task", taskSequence[i]);
+  // });
 });
 
 // fix the first practice task and shuffle the rest

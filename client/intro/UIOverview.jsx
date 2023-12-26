@@ -9,7 +9,7 @@ export default class UIOverview extends React.Component {
         ? "experiment/groupUIExample.svg"
         : "experiment/indUIExample.svg";
 
-    console.log("imagePath", imagePath);
+    // console.log("imagePath", imagePath);
 
     return (
       <Centered>
@@ -37,20 +37,19 @@ export default class UIOverview extends React.Component {
 
           <button
             type="button"
-            className="bp3-button bp3-intent-nope bp3-icon-double-chevron-left"
+            className="bp3-button bp3-intent-nope"
             onClick={onPrev}
             disabled={!hasPrev}
           >
-            Previous
+            ‹‹ Previous 
           </button>
           <button
             type="button"
             className="bp3-button bp3-intent-primary"
-            onClick={onNext}
-            disabled={!hasNext}
+            onClick={this.props.onNext}
+            disabled={false}
           >
-            Next
-            <span className="bp3-icon-standard bp3-icon-double-chevron-right bp3-align-right" />
+            Next ››
           </button>
         </div>
       </Centered>

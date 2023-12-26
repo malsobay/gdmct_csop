@@ -83,7 +83,7 @@ export default class Task extends React.Component {
       // at: new Date()
       at: moment(TimeSync.serverTime(null, 1000)),
     });
-    console.log("task moment", moment(TimeSync.serverTime(null, 1000)));
+    // console.log("task moment", moment(TimeSync.serverTime(null, 1000)));
   };
 
   render() {
