@@ -32,13 +32,14 @@ const TimedButton_2 = StageTimeWrapper((props) => {
   return (
     <button
       type="button"
+      style={{ color  : "white" , backgroundColor: disabled ? "grey" : "green"}}
       className={`bp3-button bp3-icon-tick bp3-intent-success bp3-large ${
         player.get("satisfied") ? "" : "bp3-minimal"
       }`}
       onClick={onClick}
       disabled={disabled}
     >
-      Satisfied
+      Submit Answer
     </button>
   );
 });
@@ -190,12 +191,12 @@ export default class Task extends React.Component {
           </div>
 
           <div className="response">
-            <TimedButton_1
+            {/* <TimedButton_1
               stage={stage}
               player={player}
               activateAt={game.treatment.stageDuration - 5}
               onClick={this.handleSatisfaction.bind(this, false)}
-            />
+            /> */}
 
             <TimedButton_2
               stage={stage}
