@@ -52,7 +52,7 @@ export default class TaskDetails extends React.Component {
     return (
       <Centered>
         <div className="instructions">
-          <h1 className={"bp3-heading"}> Room Assignment Tasks </h1>
+          <h1 className={"bp3-heading"}> Tutorial: Room Assignment Tasks </h1>
           <p>
             In this puzzle, you will be asked to{" "}
             <strong>assign students to dorm rooms</strong>. Students express
@@ -72,6 +72,11 @@ export default class TaskDetails extends React.Component {
               <strong>
                 NOTE: ALL the students HAVE to be assigned to a room in order
                 for your score to count.
+              </strong>
+            </p>
+            <p>
+            <strong>
+                This is a tutorial you can use to explore the interface -- we'll let you know when you're moving on to the real task!
               </strong>
             </p>
           </div>

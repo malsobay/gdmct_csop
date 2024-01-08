@@ -7,7 +7,7 @@ export default class RoomArrangements extends React.Component {
     return (
       <Centered>
         <div className="instructions">
-          <h1 className={"bp3-heading"}> Task Room Arrangements</h1>
+          <h1 className={"bp3-heading"}>Tutorial: Task Room Arrangements</h1>
           <p>
             Depending on the number of rooms, number of students, and your
             screen/browser size and resolution, the arrangement of the rooms

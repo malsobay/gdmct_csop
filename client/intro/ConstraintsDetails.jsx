@@ -11,7 +11,7 @@ export default class ConstraintsDetails extends React.Component {
     return (
       <Centered>
         <div className="instructions">
-          <h1 className={"bp3-heading"}>Respecting the Constraints</h1>
+          <h1 className={"bp3-heading"}>Tutorial: Respecting the Constraints</h1>
           <p>
             You need to{" "}
             <strong>
@@ -29,8 +29,6 @@ export default class ConstraintsDetails extends React.Component {
             Try this example again and see what will happen if a constraint is
             violated:
           </p>
-
-          <br/>
           <div style={{ textAlign: "center" }}>
             <p style={{ color: "red" }}>
               <strong>
@@ -42,6 +40,11 @@ export default class ConstraintsDetails extends React.Component {
               <strong>
                 NOTE: It is OK to leave some rooms empty, but you have to assign
                 all the students.
+              </strong>
+            </p>
+            <p>
+            <strong>
+                This is a tutorial you can use to explore the interface -- we'll let you know when you're moving on to the real task!
               </strong>
             </p>
           </div>

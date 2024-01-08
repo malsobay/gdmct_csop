@@ -14,7 +14,7 @@ export default class UIOverview extends React.Component {
     return (
       <Centered>
         <div className="instructions">
-          <h1 className={"bp3-heading"}>Scoring</h1>
+          <h1 className={"bp3-heading"}>Tutorial: Scoring</h1>
           <ul style={{fontSize:"1.8rem"}}>
             <li>Scores are only calculated for complete assignments (every student is assigned to a room). Incomplete assignments don't count!</li>
             <br/>
@@ -22,7 +22,7 @@ export default class UIOverview extends React.Component {
           </ul>
 
 
-          <h1 className={"bp3-heading"}>Game Interface</h1>
+          <h1 className={"bp3-heading"}>You're ready to begin!</h1>
           <p>
             Before proceeding to the puzzle, take one last moment to familiarize yourself with the interface. Good luck!
           </p>
