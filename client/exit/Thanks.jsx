@@ -12,6 +12,7 @@ export default class Thanks extends React.Component {
       <Centered>
         <div className="game finished">
           <h1>Thank you for participating!</h1>
+          <h2>Please submit the following code to continue: {game.treatment.experimentPhase == "preTest" ? "PRE0NXYU1" : "PSTQY3RE7"}</h2>
         </div>
       </Centered>
     );
