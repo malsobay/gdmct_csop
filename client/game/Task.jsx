@@ -105,7 +105,7 @@ export default class Task extends React.Component {
             </div>
           </div>
 
-          <div className="constraints">
+          {/* <div className="constraints">
             {stage.name === "practice" ? (
               <p>
                 <strong style={{ color: "blue" }}>
@@ -131,9 +131,9 @@ export default class Task extends React.Component {
                 );
               })}
             </ul>
-          </div>
+          </div> */}
 
-          <div className="payoff">
+          {/* <div className="payoff">
             <h5 className="bp3-heading">Payoff</h5>
             <HTMLTable className="bp3-table">
               <thead>
@@ -164,7 +164,7 @@ export default class Task extends React.Component {
                 ))}
               </tbody>
             </HTMLTable>
-          </div>
+          </div> */}
         </div>
 
         <div className="board">
