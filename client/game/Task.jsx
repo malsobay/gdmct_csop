@@ -105,6 +105,19 @@ export default class Task extends React.Component {
             </div>
           </div>
 
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img src="resources/icons/arab.png" style={{ width: "6rem", marginRight: "4rem" }} />
+            <div>
+              <h3 style={{ margin: 0 }}>Rashed</h3>
+              <ul style={{ paddingLeft: 0, listStyleType: "none", margin: 0 }}>
+                <li>Age: 25</li>
+                <li>Political affiliation: Democrat</li>
+                <li>Nationality: Saudi Arabian</li>
+              </ul>
+            </div>
+          </div>
+
+
           {/* <div className="constraints">
             {stage.name === "practice" ? (
               <p>
