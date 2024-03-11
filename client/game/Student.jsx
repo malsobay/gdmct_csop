@@ -55,6 +55,7 @@ export default class Student extends React.Component {
 
   render() {
     const { student, stage, game, player } = this.props;
+    const studentPersona = stage.get("task")["studentPersonas"][student]
     this.isDragabble = true; // usually everyone can drag, except if it is colored (i.e., being dragged by someone else)
     const dragger = stage.get(`student-${student}-dragger`);
     const style = {};
@@ -81,7 +82,7 @@ export default class Student extends React.Component {
         style={cursorStyle}
       >
         <img
-          src="resources/icons/arab.png" // Replace with the actual path to the image file
+          src={studentPersona["avatar"]} // Replace with the actual path to the image file
           alt={student}
           style={{width: "60px", padding: "10px"}}
         />
