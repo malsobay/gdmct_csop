@@ -86,7 +86,7 @@ export default class Task extends React.Component {
     });
     // console.log("task moment", moment(TimeSync.serverTime(null, 1000)));
   };
-
+  
   render() {
     const { game, stage, player } = this.props;
 
@@ -105,16 +105,23 @@ export default class Task extends React.Component {
             </div>
           </div>
 
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <img src="resources/icons/arab.png" style={{ width: "6rem", marginRight: "4rem" }} />
-            <div>
-              <h3 style={{ margin: 0 }}>Rashed</h3>
-              <ul style={{ paddingLeft: 0, listStyleType: "none", margin: 0 }}>
-                <li>Age: 25</li>
-                <li>Political affiliation: Democrat</li>
-                <li>Nationality: Saudi Arabian</li>
-              </ul>
-            </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "left", maxHeight: "600px", overflowY: "scroll"}}>
+            {task.students.map((student) => {
+                  const studentPersona = task.studentPersonas[student];
+                  return (
+                    <div style={{marginBottom:"20px", display: "flex", alignItems: "center"}}>
+                    <img src={studentPersona.avatar} style={{ width: "6rem", marginRight: "4rem" }} />
+                            <div>
+                              <h3 style={{ margin: 0 }}>{studentPersona.name}</h3>
+                              <ul style={{ paddingLeft: 0, listStyleType: "none", margin: 0 }}>
+                                <li><strong>Race & Gender:</strong> {studentPersona.race} {studentPersona.gender}</li>
+                                <li><strong>Hobby:</strong> {studentPersona.hobby}</li>
+                                <li><strong>Major:</strong> {studentPersona.major}</li>
+                              </ul>
+                            </div>
+                  </div>
+                  );
+                })}
           </div>
 
 
