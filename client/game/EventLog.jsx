@@ -17,8 +17,9 @@ export default class EventLog extends React.Component {
   }
 
   render() {
-    const { events, player } = this.props;
-
+    const { events, player, stage } = this.props;
+    const studentPersonas = stage.get("task").studentPersonas;
+    
     //if the one who made the event is the player himself then self will be true
     return (
       <div className="eventlog bp3-card">
@@ -28,6 +29,7 @@ export default class EventLog extends React.Component {
               key={i}
               event={event}
               self={event.subject ? player._id === event.subject._id : null}
+              studentPersonas={studentPersonas}
             />
           ))}
         </div>
@@ -47,7 +49,8 @@ class Event extends React.Component {
       state,
       at,
     } = this.props.event;
-    const { self } = this.props;
+    const { self, studentPersonas } = this.props;
+    
     let content;
     switch (verb) {
       case "roundStarted":
@@ -57,7 +60,7 @@ class Event extends React.Component {
         content = (
           <div className="content">
             <Author player={subject} self={self} /> moved{" "}
-            <div className="object">{object}</div> to{" "}
+            <div className="object">{studentPersonas[object].name}</div> to{" "}
             <div className="target">Room {target}</div>.
           </div>
         );
@@ -66,7 +69,7 @@ class Event extends React.Component {
         content = (
           <div className="content">
             <Author player={subject} self={self} /> started moving{" "}
-            <div className="object">{object}</div>.
+            <div className="object">{studentPersonas[object].name}</div>.
           </div>
         );
         break;
@@ -74,7 +77,7 @@ class Event extends React.Component {
         content = (
           <div className="content">
             <Author player={subject} self={self} /> released{" "}
-            <div className="object">{object}</div> without moving it.
+            <div className="object">{studentPersonas[object].name}</div> without moving them.
           </div>
         );
         break;
