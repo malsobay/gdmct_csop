@@ -18,60 +18,60 @@ export const CognitiveLoadTasks = {
 students: ["A", "B", "C", "D", "E", "F"],
 studentPersonas: {
 A: PlayerPersonas.Carl,
-B: PlayerPersonas.Mike,
+B: PlayerPersonas.James,
 C: PlayerPersonas.Jonathan,
 D: PlayerPersonas.Tom, 
-E: PlayerPersonas.James,
-F: PlayerPersonas.Rashed},
-    rooms: [101, 102, 103, 104, 105, 106],
+E: PlayerPersonas.Rashed,
+F: PlayerPersonas.Mike},
+    rooms: [101, 102, 103, 104, 105],
 
     constraints: [
       {
         _id: 0,
         type: 1,
-        pair: ["A", "E"],
+        pair: ["A", "B"],
         text: "can't live in the same room"
       },
       {
         _id: 1,
         type: 1,
-        pair: ["A", "F"],
+        pair: ["A", "E"],
         text: "can't live in the same room"
       },
       {
         _id: 2,
         type: 1,
-        pair: ["B", "E"],
+        pair: ["C", "B"],
         text: "can't live in the same room"
       },
       {
         _id: 3,
         type: 1,
-        pair: ["B", "F"],
+        pair: ["C", "E"],
         text: "can't live in the same room"
       },
       {
         _id: 4,
         type: 1,
-        pair: ["C", "E"],
+        pair: ["D", "B"],
         text: "can't live in the same room"
       },
       {
         _id: 5,
         type: 1,
-        pair: ["C", "F"],
+        pair: ["D", "E"],
         text: "can't live in the same room"
       },
       {
         _id: 6,
         type: 1,
-        pair: ["D", "E"],
+        pair: ["F", "B"],
         text: "can't live in the same room"
       },
       {
         _id: 7,
         type: 1,
-        pair: ["D", "F"],
+        pair: ["F", "E"],
         text: "can't live in the same room"
       },
     ],
@@ -95,13 +95,13 @@ F: PlayerPersonas.Rashed},
     difficulty: "Hard",
 students: ["A", "B", "C", "D", "E", "F"],
 studentPersonas: {
-A: PlayerPersonas.Carl,
-B: PlayerPersonas.Mike,
-C: PlayerPersonas.Jonathan,
-D: PlayerPersonas.Tom, 
-E: PlayerPersonas.James,
-F: PlayerPersonas.Rashed},
-    rooms: [101, 102, 103, 104, 105, 106],
+  A: PlayerPersonas.Carl,
+  B: PlayerPersonas.James,
+  C: PlayerPersonas.Jonathan,
+  D: PlayerPersonas.Tom, 
+  E: PlayerPersonas.Rashed,
+  F: PlayerPersonas.Mike},
+    rooms: [101, 102, 103, 104, 105],
 
     constraints: [
       {
@@ -113,19 +113,19 @@ F: PlayerPersonas.Rashed},
       {
         _id: 1,
         type: 1,
-        pair: ["A", "F"],
+        pair: ["A", "E"],
         text: "can't live in the same room"
       },
       {
         _id: 2,
         type: 1,
-        pair: ["B", "D"],
+        pair: ["F", "D"],
         text: "can't live in the same room"
       },
       {
         _id: 3,
         type: 1,
-        pair: ["B", "F"],
+        pair: ["F", "E"],
         text: "can't live in the same room"
       },
       {
@@ -137,7 +137,7 @@ F: PlayerPersonas.Rashed},
       {
         _id: 5,
         type: 1,
-        pair: ["C", "F"],
+        pair: ["C", "E"],
         text: "can't live in the same room"
       },
       {
@@ -149,7 +149,7 @@ F: PlayerPersonas.Rashed},
       {
         _id: 7,
         type: 1,
-        pair: ["D", "F"],
+        pair: ["D", "E"],
         text: "can't live in the same room"
       },
     ],
